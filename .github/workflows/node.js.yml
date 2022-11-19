@@ -3,15 +3,15 @@
 name: Daily Report
 
 on:
-schedule: 
-- cron: "0 14 * * *"
-workflow_dispatch:
+  schedule: 
+  - cron: "0 14 * * *"
+  workflow_dispatch:
 
 env:
-MAIL_USER_EMAIL: ${{ secrets.MAIL_USER_EMAIL }}
-MAIL_USER_PASSWORD: ${{secrets.MAIL_USER_PASSWORD}}
-MAIL_FROM: ${{SECRETS.MAIL_FROM}}
-MAIL_TO: ${{secrets.MAIL_TO}}
+  MAIL_USER_EMAIL: ${{ secrets.MAIL_USER_EMAIL }}
+  MAIL_USER_PASSWORD: ${{secrets.MAIL_USER_PASSWORD}}
+  MAIL_FROM: ${{SECRETS.MAIL_FROM}}
+  MAIL_TO: ${{secrets.MAIL_TO}}
 
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
  
 
     steps:
